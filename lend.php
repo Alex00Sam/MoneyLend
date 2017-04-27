@@ -9,8 +9,7 @@ require 'init.php';
 //	return $form->success('Record updated');
 		
 //});
-$grid= $app->layout->add('CRUD');
-$grid->setModel(new Friends($db));
-$grid->addAction('Update details',new \atk4\ui\jsExpression('document.location="op.php?friends_id="+$(this).closest("tr").data("id");'));
+
+//$grid->addAction('Update details',new \atk4\ui\jsExpression('document.location="op.php?friends_id="+$(this).closest("tr").data("id");'));
 ?>
 
