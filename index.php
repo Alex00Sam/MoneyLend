@@ -1,3 +1,3 @@
 <?php
-require 'helloworld.php';
+require 'lend.php';
 
