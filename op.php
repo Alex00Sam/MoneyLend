@@ -8,7 +8,7 @@
 	$grid->setModel(new Money($db));
 	}
 	else {
-		$app->layout->add(['text','No info was found']);
+		$app->layout->add('No info was found');
 		$grid= $app->layout->add('CRUD');
 		$grid->setModel(new Money($db));
 		$grid->addAction('Update details',new \atk4\ui\jsExpression('document.location="op.php?friends_id="+$(this).closest("tr").data("id");'));
