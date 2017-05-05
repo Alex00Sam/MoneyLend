@@ -6,7 +6,7 @@
 	$grid->setModel(new money($db));
 	}
 	else {
-		$error=$app->layout->add(['text','No info was found']);
+		echo "No info was found";
 		$grid= $app->layout->add('CRUD');
 		$grid->setModel(new money($db));	
 	}
