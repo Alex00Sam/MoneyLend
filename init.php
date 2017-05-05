@@ -6,7 +6,7 @@ $app=new \atk4\ui\App('Money Lending App');
 ///////////
 
 //Layout//
-$layout = $app->initLayout('Admin');
+$layout = $app->initLayout('Centered');
 //////////
 
 //DB Connection//
