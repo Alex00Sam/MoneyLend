@@ -4,6 +4,6 @@ class money extends \atk4\data\Model {
 	function init() {
 		parent::init();
 		$this->addFields(['type','amount','date']);
-		$this->hasOne('friends_id', new mriends);
+		$this->hasOne('friends_id', new friends);
 	}
 }
