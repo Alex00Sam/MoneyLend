@@ -6,6 +6,6 @@ class money extends \atk4\data\Model {
 		$this->addField('type',['type'=>'boolean']);
 		$this->addField('amount');
 		$this->addField('date',['type'=>'date']);
-		$this->hasOne('friends');
+		$this->hasOne('friends_id', new friends);
 	}
 }
