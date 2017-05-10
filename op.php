@@ -1,7 +1,7 @@
 <?php
 	require 'init.php';
 	
-/*	if (isset($GET["id"])){
+/*	if (isset($GET["amount"])){
 	$grid= $app->layout->add('CRUD');
 	$grid->setModel(new money($db));
 	}
