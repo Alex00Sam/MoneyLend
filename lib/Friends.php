@@ -4,6 +4,6 @@ class friends extends \atk4\data\Model {
 	function init() {
 		parent::init();
 		$this->addField(['name','email']);
-		$this->hasMany('money', new Money);
+		$this->hasMany('money', new money);
 	}
 }
