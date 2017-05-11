@@ -11,6 +11,6 @@
 	});
 	$grid= $app->layout->add('CRUD');
 	$grid->setModel(new Friends($db));
-	$grid->addAction('Update details',new \atk4\ui\jsExpression('document.location="op.php;'));
+	$grid->addAction('Update details',new \atk4\ui\jsExpression('document.location="op.php;"'));
 ?>
 
