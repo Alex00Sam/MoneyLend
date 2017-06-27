@@ -11,7 +11,7 @@
 	});
 	$crud= $app->layout->add('CRUD');
 	$crud->addColumn('name', new \atk4\ui\TableColumn\Link(['Money', 'friends_id'=>'{$id}']));
-	$crud->setModel($app->ref('money'), ['email']);
+	$crud->setModel($app->ref('Friends'), ['email']);
 //	$crud->setModel(new Friends($db));
 //	$crud->addAction('Update details',new \atk4\ui\jsExpression('document.location="op.php"'));
 ?>
