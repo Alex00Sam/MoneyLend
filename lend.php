@@ -9,8 +9,8 @@
 		return $form->success('Record updated');
 			
 	});
-	$grid= $app->layout->add('CRUD');
-	$grid->setModel(new Friends($db));
-	$grid->addAction('Update details',new \atk4\ui\jsExpression('document.location="op.php"'));
+	$crud= $app->layout->add('CRUD');
+	$crud->setModel(new Friends($db));
+	$crud->addAction('Update details',new \atk4\ui\jsExpression('document.location="op.php"'));
 ?>
 

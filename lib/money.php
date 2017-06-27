@@ -6,6 +6,6 @@ class Money extends \atk4\data\Model {
 		$this->addField('type',['enum'=>['+'=>'new lend','-'=>'new return']]);
 		$this->addField('amount');
 		$this->addField('date',['type'=>'date']);
-		$this->hasOne('friends');
+		$this->hasOne('Friends', new Friends());
 	}
 }
