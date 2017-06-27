@@ -9,6 +9,6 @@
 		echo "No info was found"; */
 		$crud= $app->layout->add('CRUD');
 		//$crud->setModel(new money($db));	
-		$crud->addColumn('name', new \atk4\ui\TableColumn\Link(['loan', 'contact_id'=>'{$id}']));
+		$crud->addColumn('name', new \atk4\ui\TableColumn\Link(['Money', 'friends_id'=>'{$id}']));
 		$crud->setModel($app->user->ref('Friends'), ['email']);
 //	}
