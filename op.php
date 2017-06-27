@@ -8,7 +8,8 @@
 	else {
 		echo "No info was found"; */
 		$crud= $app->layout->add('CRUD');
-		//$crud->setModel(new money($db));	
+			
 		$crud->addColumn('name', new \atk4\ui\TableColumn\Link(['Money', 'friends_id'=>'{$id}']));
 //		$crud->setModel($app->ref('money'), ['email']);
+	$crud->setModel(new money($db));
 //	}
