@@ -56,16 +56,16 @@
         },
         {
             "name": "atk4/data",
-            "version": "1.1.16",
+            "version": "1.1.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/atk4/data.git",
-                "reference": "c6674bccb565b93db0f90ea142a59f700038f471"
+                "reference": "c6416bb2a9090f701a165ebd98d3c05d3f6725aa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/atk4/data/zipball/c6674bccb565b93db0f90ea142a59f700038f471",
-                "reference": "c6674bccb565b93db0f90ea142a59f700038f471",
+                "url": "https://api.github.com/repos/atk4/data/zipball/c6416bb2a9090f701a165ebd98d3c05d3f6725aa",
+                "reference": "c6416bb2a9090f701a165ebd98d3c05d3f6725aa",
                 "shasum": ""
             },
             "require": {
@@ -109,7 +109,7 @@
                 "query",
                 "sql"
             ],
-            "time": "2017-04-28T09:00:39+00:00"
+            "time": "2017-06-09T17:19:59+00:00"
         },
         {
             "name": "atk4/dsql",
@@ -167,16 +167,16 @@
         },
         {
             "name": "atk4/ui",
-            "version": "1.1.1",
+            "version": "1.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/atk4/ui.git",
-                "reference": "a93bf2bdc45643af57e2259745b8e2e6f6fe9688"
+                "reference": "8b2a8f59cce9e18b6cd9dd5bd49f4d474f987508"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/atk4/ui/zipball/a93bf2bdc45643af57e2259745b8e2e6f6fe9688",
-                "reference": "a93bf2bdc45643af57e2259745b8e2e6f6fe9688",
+                "url": "https://api.github.com/repos/atk4/ui/zipball/8b2a8f59cce9e18b6cd9dd5bd49f4d474f987508",
+                "reference": "8b2a8f59cce9e18b6cd9dd5bd49f4d474f987508",
                 "shasum": ""
             },
             "require": {
@@ -221,7 +221,7 @@
                 "web",
                 "widget"
             ],
-            "time": "2017-04-28T22:04:23+00:00"
+            "time": "2017-06-12T07:04:21+00:00"
         },
         {
             "name": "fzaninotto/faker",
