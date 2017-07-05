@@ -1,6 +1,8 @@
 <?php
 	require 'init.php';
-
+	$back=$app->layout->add('Button');
+	$back->set('Back');
+	$back->link('index.php');
 	$friend = new Friends($db);
 	$friend->load($app->stickyGet('friends_id'));
 	$loans = $friend->ref('Money');
