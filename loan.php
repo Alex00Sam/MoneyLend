@@ -8,5 +8,5 @@
 	$loans = $friend->ref('Money');
 	$columns = $app->layout->add(['ui'=>'segment'])->add(new \atk4\ui\Columns('divided'));
 	$crud = $columns->addColumn();
-	$crud->add('CRUD')->setModel($loans);
+	$crud->add('CRUD')->setModel(new Money($db));
 	$reminder = $columns->addColumn()->add(new ReminderBox())->setModel($friend)->setModel($loans);
