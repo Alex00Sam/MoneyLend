@@ -9,5 +9,5 @@
 	$columns = $app->layout->add(['ui'=>'segment'])->add(new \atk4\ui\Columns('divided'));
 	$crud = $columns->addColumn();
 	$ispaid = ['positive'=>'new return','negative'=>'new return'];
-	$crud->add('CRUD')->setModel(new Money($db))->addColumn('status', new \atk4\ui\TableColumn\Status($ispaid));
+	$crud->add('CRUD')->addColumn('status', new \atk4\ui\TableColumn\Status($ispaid))->setModel(new Money($db));
 	//$reminder = $columns->addColumn()->add(new ReminderBox())->setModel($friend)->setModel($loans);
