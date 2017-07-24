@@ -8,7 +8,7 @@
 	$loans = $friend->ref('Money');
 	$columns = $app->layout->add(['ui'=>'segment'])->add(new \atk4\ui\Columns('divided'));
 	$column = $columns->addColumn();
-	$ispaid = ['positive'=>['new return'],'negative'=>['new return']];
+	$ispaid = ['positive'=>['new return'],'negative'=>['new lend']];
 	$crud = $column->add('CRUD');
   $crud->setModel(new Money($db));
 	$crud->addColumn('type', new \atk4\ui\TableColumn\Status($ispaid));
