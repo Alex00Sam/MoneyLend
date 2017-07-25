@@ -13,4 +13,4 @@
 	$crud->addColumn('type', new \atk4\ui\TableColumn\Status($ispaid));
   $crud->setModel(new Money($db),['amount','date']);
 
-	//$reminder = $columns->addColumn()->add(new ReminderBox())->setModel($loans);
+	$reminder = $columns->addColumn()->add(new ReminderBox())->setModel($friend);
