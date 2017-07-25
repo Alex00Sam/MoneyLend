@@ -10,6 +10,6 @@
 	$column = $columns->addColumn();
 	$ispaid = ['positive'=>['new return'],'negative'=>['new lend']];
 	$crud = $column->add('CRUD');
-  $crud->setModel(new Money($db));
+  $crud->setModel(new Money($db),['amount','date']);
 	$crud->addColumn('type', new \atk4\ui\TableColumn\Status($ispaid));
 	//$reminder = $columns->addColumn()->add(new ReminderBox())->setModel($loans);
