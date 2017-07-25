@@ -11,6 +11,6 @@
 	$ispaid = ['positive'=>['new return'],'negative'=>['new lend']];
 	$crud = $column->add('CRUD');
 	$crud->addColumn('type', new \atk4\ui\TableColumn\Status($ispaid));
-  $crud->setModel(new Money($db),['amount','date']);
+  $crud->setModel($loans,['amount','date']);
 
 	$reminder = $columns->addColumn()->add(new ReminderBox())->setModel($friend);
