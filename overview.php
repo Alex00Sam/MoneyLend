@@ -1,7 +1,7 @@
 <?php
 	require 'init.php';
 	//Form//
-	$intro = $app->layout->add('Text')->addParagraph('Welcome to Money Lending App, where you can manage your friend loans and their returnings. Enjoy!');
+	$intro = $app->layout->add('Header')->set('Welcome to Money Lending App, where you can manage your friend loans and their returnings. Enjoy!');
 	$form = $app->layout->add('Form');
 	$form->setModel(new Friends($db));
 
