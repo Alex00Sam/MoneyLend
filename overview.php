@@ -1,6 +1,7 @@
 <?php
 	require 'init.php';
 	//Form//
+	$intro = $app->layout->add('Text')->addParagraph('Welcome to Money Lending App, where you can manage your friend loans and their returnings. Enjoy!');
 	$form = $app->layout->add('Form');
 	$form->setModel(new Friends($db));
 
@@ -14,6 +15,3 @@
 
 	$crud->addColumn('name', new \atk4\ui\TableColumn\Link('loan.php?friends_id={$id}'));
 	$crud->setModel(new Friends($db));
-	//$crud->setModel(ref('Friends'), ['email','phone']);
-//	$crud->setModel(new Friends($db));
-//	$crud->addAction('Update details',new \atk4\ui\jsExpression('document.location="op.php"'));
