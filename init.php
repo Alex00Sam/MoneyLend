@@ -3,7 +3,7 @@
 require 'vendor/autoload.php';
 
 //New app//
-$app = new \atk4\ui\App('Money Lending');
+$app = new \atk4\ui\App('Money Lending App');
 ///////////
 
 //Layout//

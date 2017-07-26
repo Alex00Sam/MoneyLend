@@ -12,6 +12,7 @@
 	$crud = $column->add('CRUD');
 	$crud->addColumn('type', new \atk4\ui\TableColumn\Status($ispaid));
   $crud->setModel($loans,['amount','date']);
-	$reminder = $columns->addColumn()->$app->layout->add('Header')
+	$column2 =  $columns->addColumn();
+ 	$reminder = $column2->add('Header')
 	->set('Here you have reminder message for your friend. If you will, you can send it to him.')
 	->add(new ReminderBox())->setModel($friend);
