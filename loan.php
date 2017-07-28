@@ -3,12 +3,12 @@
 	$back=$app->layout->add('Button');
 	$back->set('Back');
 	$back->link('index.php');
-
 	$friend = new Friends($db);
 	$friend->load($app->stickyGet('friends_id'));
 	$borrowed = $friend->ref('Borrowed');
 	$returned = $friend->ref('Returned');
 
+	$layout->add('Header')->set($friend['name']);
 	$columns = $app->layout->add(['ui'=>'segment'])->add(new \atk4\ui\Columns('divided'));
 	$column = $columns->addColumn();
 
