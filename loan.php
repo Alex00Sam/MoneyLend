@@ -12,9 +12,13 @@
 	$columns = $app->layout->add(['ui'=>'segment'])->add(new \atk4\ui\Columns('divided'));
 	$column = $columns->addColumn();
 
+	$column->add('Header')->set('In that interface you can add new lends:');
 	$crud1 = $column->add('CRUD');
   $crud1->setModel($borrowed,['amount','date']);
+
 	$column->add(['ui'=>'hidden divider']);
+
+	$column->add('Header')->set('In that interface you can add new returnings:');
 	$crud2 = $column->add('CRUD');
 	$crud2->setModel($returned,['amount','date']);
 
