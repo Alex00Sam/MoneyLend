@@ -11,6 +11,11 @@ $form->onSubmit(function($form) {
 
 $layout->add(['ui'=>'hidden divider']);
 
+$friend = new Friends($db);
+$ispaid = ['positive'=>[($friend['total_borrowed']-$friend['total_returned'])<0],'negative'=>[($friend['total_borrowed']-$friend['total_returned'])>0]];
+
 $crud = $app->layout->add('CRUD');
+$crud->addColumn('name', new \atk4\ui\TableColumn\Status($ispaid));
 $crud->addColumn('name', new \atk4\ui\TableColumn\Link('loan.php?friends_id={$id}'));
+
 $crud->setModel(new Friends($db));
