@@ -14,6 +14,7 @@
 
 	$crud1 = $column->add('CRUD');
   $crud1->setModel($borrowed,['amount','date']);
+	$column->add(['ui'=>'hidden divider']);
 	$crud2 = $column->add('CRUD');
 	$crud2->setModel($returned,['amount','date']);
 
