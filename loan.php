@@ -10,8 +10,8 @@
 
 	$layout->add('Header')->set($friend['name']);
 	$columns = $app->layout->add(['ui'=>'segment'])->add(new \atk4\ui\Columns('divided'));
-	$column = $columns->addColumn();
 
+	$column = $columns->addColumn();
 	$column->add('Header')->set('In that interface you can add new lends:');
 	$crud1 = $column->add('CRUD');
   $crud1->setModel($borrowed,['amount','date']);
