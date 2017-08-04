@@ -7,7 +7,7 @@ $form->setModel(new Friends($db));
 
 $form->onSubmit(function($form) {
   $form->model->save();
-  return $form->success('Record updated');
+  return $form->success('You have successfully added a new friend!');
 
 });
 $layout->add(['ui'=>'hidden divider']);
