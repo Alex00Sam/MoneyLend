@@ -112,3 +112,79 @@ $crud->setModel(new Friends($db));
 ```
 
 Great! Our homepage is done. Now let's proceed to the report pages!
+
+## Step 2
+
+Our report page `loan.php` will consist friend's name, his loans and reminder message for him. Let's start!
+
+```php
+<?php
+	require 'init.php';
+	$back=$app->layout->add('Button'); 		//
+	$back->set('Back');						// Back button
+	$back->link('index.php');				//
+```
+
+ We need to make relation with a friend and his loans:
+
+```php
+	$friend = new Friends($db);
+	$friend->load($app->stickyGet('friends_id'));  // making a relation
+	$borrowed = $friend->ref('Borrowed');	// relation for borrowed
+	$returned = $friend->ref('Returned');	// relation for returned
+
+```
+
+In case if you forgot current friend's name, we will add his name:
+
+```php
+$layout->add('Header')->set($friend['name']);  // adding name
+```
+
+I think column-style would look nice, that's why I will use columns:
+
+```php
+$columns = $app->layout->add(['ui'=>'segment'])->add(new \atk4\ui\Columns('divided')); //adding column style
+$column = $columns->addColumn(); // adding first column
+```
+
+Now it's time to add tables with loans:
+
+```php
+	$column->add('Header')->set('In that interface you can add new lends:'); //adding header
+	$crud1 = $column->add('CRUD');
+ 	$crud1->setModel($borrowed,['amount','date']);  //making crud for borrowed
+
+	$column->add(['ui'=>'hidden divider']);
+
+	$column->add('Header')->set('In that interface you can add new returnings:');
+	$crud2 = $column->add('CRUD');
+	$crud2->setModel($returned,['amount','date']); //making crud for borrowed
+```
+
+In the second column will be our reminder message:
+
+```php
+$column2 =  $columns->addColumn();  //adding second column
+$column2->add('Header')->set('Here you have reminder message for your friend. If you will, you can send it to him.');
+$column2->add(new ReminderBox())->setModel($friend); //adding reminder message
+```
+
+Now we need to add a model for our reminder:
+
+```php
+<?php
+class ReminderBox extends \atk4\ui\View {
+    public $ui='piled segment';
+    /**
+     * Specify which contact to remind about
+     */
+    public function setModel(\atk4\data\Model $friend) {
+        $this->add('Header')->set('Please repay my loan, '.$friend['name']);
+        $this->add('Text')->addParagraph('I have loaned you a total of ' . $friend['total_borrowed'] . '€ from which you still owe me ' . ($friend['total_borrowed']-$friend['total_returned']) . '€. Please pay back!');
+        $this->add('Text')->addParagraph('Thanks!');
+    }
+}
+```
+
+And that's it! Hope that you've made through! Good job!
