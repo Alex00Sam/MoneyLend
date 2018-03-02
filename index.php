@@ -1,17 +1,18 @@
 <?php
-require 'init.php';
-//Form//
-$intro = $app->layout->add('Header')->set('Welcome to Money Lending App, where you can manage your friend loans and their returnings. Enjoy!');
-$form = $app->layout->add('Form');
-$form->setModel(new Friends($db));
+  require 'vendor/autoload.php';
+  $app = new \atk4\ui\App('Test');
+  $app->initLayout('Centered');
 
-$form->onSubmit(function($form) {
-  $form->model->save();
-  return $form->success('You have successfully added a new friend!');
+  $button = $app->add(['Button','Click']);
 
-});
-$layout->add(['ui'=>'hidden divider']);
-$crud = $app->layout->add('CRUD');
+  $seg = $app->add(['ui'=>'segment']);
 
-$crud->addColumn('name', new \atk4\ui\TableColumn\Link('loan.php?friends_id={$id}'));
-$crud->setModel(new Friends($db));
+  $label = $seg->add(['Label','Old name']);
+  if(isset($_GET['name'])) {
+    $label->set($_GET['name']);
+  }
+
+  $button ->on('click',function () use($seg) {
+    $name = 'New name';
+    return $seg->jsReload(['name'=>$name]);
+  });
