@@ -187,4 +187,4 @@ class ReminderBox extends \atk4\ui\View {
 }
 ```
 
-And that's it! Hope that you've made through! Good job!
+And that's it! Hope that you've made it through! Good job!
